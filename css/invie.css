@@ -1,0 +1,40 @@
+
+*{ /*Propiedad universal*/
+	border:1px solid red;
+	margin: 10px;
+}
+
+header{ /*Propiedad de Etiqueta*/
+	background-color: blue;
+}
+
+section {
+	background-color: purple;
+}
+
+/*Selector descendente*/
+article h3{
+	color: green;
+}
+
+/*Selectores de Clase*/
+.title-a{
+	background-color: yellow;
+}
+.title-b{
+	background-color: salmon;
+}
+
+/*Selector de ID*/
+#header{
+	border:3px solid black;
+}
+
+#portada{
+	border:3px solid orange;
+}
+
+#guitarra{
+	border:3px solid brown;
+}
+
