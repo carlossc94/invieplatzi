@@ -5,15 +5,18 @@
 		<title>Invie - Precios</title>
 		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Allerta' rel='stylesheet' type='text/css'><!--CDN-->	
 		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 	</head>
-<body>
+<body class="precios">
 	<header id="header" class="header background"><!--Header-->
 	<div class="contenedor">
 		<figure class="logotipo"> <!--logotipo-->
 			<img src="images/invie.png" width="186px" height="60px" alt="Invie logotipo"> <!--Absoluta enlace completo --> <!--Relativa enlace del proyecto -->
 		</figure>
 
-		<nav class="menu"> <!--Menu-->
+		<span class="burguer-button icon-menu" id="burguer-button"></span>
+
+		<nav class="menu" id="menu"> <!--Menu-->
 			<ul>
 				<li>
 					<a href="index.html">Home</a>
@@ -41,10 +44,24 @@
 					<th>Modelo</th>
 					<th>Precio</th>
 					<th>Descripción</th>
+					<th>Modelo</th>
+					<th>Precio</th>
+					<th>Descripción</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
+					<td>Invie Acústica</td>
+					<td>$10000</td>
+					<td>Una Guitarra Muy Pro</td>
+					<td>Invie Acústica</td>
+					<td>$10000</td>
+					<td>Una Guitarra Muy Pro</td>
+				</tr>
+				<tr>
+					<td>Invie Acústica</td>
+					<td>$10000</td>
+					<td>Una Guitarra Muy Pro</td>
 					<td>Invie Acústica</td>
 					<td>$10000</td>
 					<td>Una Guitarra Muy Pro</td>
@@ -53,8 +70,6 @@
 					<td>Invie Classic</td>
 					<td>$10000</td>
 					<td>Una Guitarra Muy Pro</td>
-				</tr>
-				<tr>
 					<td>Invie Classic</td>
 					<td>$10000</td>
 					<td>Una Guitarra Muy Pro</td>
@@ -123,5 +138,42 @@
 			</form>
 		</div>
 	</footer>
+
+			<script type="text/javascript">
+		/*Burguer buttin*/
+		var $BurguerButton = document.getElementById("burguer-button");
+		var $menu=document.getElementById("menu");
+
+		function togglebutton(){				
+			$menu.classList.toggle('active');
+		}
+		/*Burguer-button*/
+
+		/*Media query con Javascript*/
+		var consulta=window.matchMedia('(max-width:500px)');
+
+		consulta.addListener(mediaQuery);
+
+		function mediaQuery(){
+			if(consulta.matches){
+				console.log("Se cumplio la condicion");
+				$BurguerButton.addEventListener('click',togglebutton);
+			}
+			else{
+				console.log("No se cumplio la condicion");
+			}
+		}
+
+	mediaQuery();
+
+
+
+	/*Lazy Loading*/
+	var bLazy = new Blazy({
+    	selector:'img'
+	});
+
+	/*Lazy Loading*/
+		</script>
 </body>
 </html>
